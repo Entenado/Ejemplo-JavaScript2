@@ -1,35 +1,35 @@
 /*En este apartado intentaremos crear un cajero automatico, el cual nos indique,
 los fondos que tiene el usuario, si desea retirar plata, o si desea generar un plazo fijo */
 const usuario= [
-{usuario : "Goribe"},{contraseña1 : "Function123"},
-{usuario : "Proque"},{contraseña2 : "Solar1"},
-{usuario : "Ssalvo"},{contraseña3 : "Parque43"}
+{usuario : "goribe"},{contraseña1 : "function123"},
+{usuario : "proque"},{contraseña2 : "solar1"},
+{usuario : "ssalvo"},{contraseña3 : "parque43"}
 ]
-let ingreseUsuario = prompt ("Ingrese usuario");
-let ingreseContraseña = prompt ("Ingrese contraseña");
-const usuario1 = usuario.find((x) => x.usuario === "Goribe");
-const usuario2 = usuario.find((x) => x.usuario === "Proque");
-const usuario3 = usuario.find((x) => x.usuario === "Ssalvo");
+let ingreseUsuario = prompt ("Bienvenido al cajero aconcagua, porfavor ingrese usuario");
+let ingreseContraseña = prompt ("Ingrese su contraseña");
+const usuario1 = usuario.find((x) => x.usuario === "goribe");
+const usuario2 = usuario.find((x) => x.usuario === "proque");
+const usuario3 = usuario.find((x) => x.usuario === "ssalvo");
 if (ingreseUsuario == usuario1){
   console.log ("");
-}else if (ingreseContraseña == "Function123"){
-  console.log("Hola Gonzalo,eliga la opcion a realizar")
+}else if (ingreseContraseña == "function123"){
+  console.log("Hola gonzalo,eliga la opcion a realizar")
 } else if (ingreseUsuario == usuario2){
   console.log ("");
-}else if (ingreseContraseña == "Solar1"){
-  console.log ("Hola Pedro, elige la opcion a realizar")
+}else if (ingreseContraseña == "solar1"){
+  console.log ("Hola pedro, elige la opcion a realizar")
 }else if (ingreseUsuario == usuario3){
   console.log ("");
-}else if (ingreseContraseña == "Parque43"){
-  console.log ("Hola Susana, elige la opcion a realizar")
+}else if (ingreseContraseña == "parque43"){
+  console.log ("Hola susana, elige la opcion a realizar")
 }else{
   console.log("error");
 };
 // En esta primer parte solo determinamos por consola, quien de los primeros 3 clientes de nuestro banco virtual entrará
-let Seleccionar = prompt ("Ingrese opcion");
+let Seleccionar = prompt ("Ingrese opcion (1) si desea hacer un retiro ó ingrese opcion (2) si desea constituir un plazo fijo");
   //Por ahora solo tenemos 2 opciones ya sea extracción o constitución de plazo fijo
   const extraccion = {
-  fondos : parseInt(prompt("Ingrese numero")),
+  fondos : parseInt(prompt("Ingrese Fondos")),
   
   montoExtraccion : parseInt (prompt("Ingrese extraccion")),
   
@@ -44,8 +44,6 @@ let Seleccionar = prompt ("Ingrese opcion");
   
   cajero(extraccion.fondos, extraccion.montoExtraccion);
   
-
-
   
   let deposito = parseFloat(prompt("Ingrese monto a depositar"));
   let plazos = parseFloat[30,60,90];
@@ -73,18 +71,19 @@ let Seleccionar = prompt ("Ingrese opcion");
   
   // En este apartado seleccionamos la opcion a realizar.
   if (Seleccionar ==1){
-  console.log("Usted tiene", extraccion.fondos, "pesos disponibles.");
+  console.log("Usted posee en la cuenta la suma de", extraccion.fondos, "pesos disponibles.");
   
-  console.log("Usted solicito extraer", extraccion.montoExtraccion, "pesos.");
+  console.log("Usted solicitó extraer", extraccion.montoExtraccion, "pesos.");
   
-  console.log("El saldo que le queda disponible es de", extraccion.saldo, "pesos.");
+  console.log("El saldo disponible es de", extraccion.saldo, "pesos.");
   }
   else if (Seleccionar == 2){
-    console.log ("usted depositó a", plazos, "dias");
-    console.log ("usted obtendrá al finalizar el plazo",plazoFijo(deposito),"pesos");
+    console.log ("usted constituyó un plazo fijo a", plazos, "dias");
+    console.log ("una vez finalizado el periodo, usted obtendrá la suma de",plazoFijo(deposito),"pesos");
   }
   else {
     alert ("error")
   };
   /* El banco es funcional, aun quedan detalles, como concatenar ciertas funciones y objetos, 
   aun asi entiende lo que queremos hacer, la idea es agregar algunas otras funciones, y empezar a darle forma con css y hmtl*/
+  
