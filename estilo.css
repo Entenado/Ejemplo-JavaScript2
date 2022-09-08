@@ -1,0 +1,55 @@
+
+.cabeza img{
+    width: 80px;
+    text-align: left;
+    height: 50px;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+.cabeza{
+    background-color: rgb(62, 142, 189);
+    width: auto;
+    padding: 0px;
+    margin-left: 0px;
+}
+.menu li{
+    list-style: none;
+    background-color: rgb(1, 238, 255);
+    font: bold 14 px verdana;
+    border: 1px solid rgb(93, 150, 158);
+
+    display: inline-block;
+}
+.menu{
+    padding-left: 20px;
+    background-color: rgb(62,142,189);
+}
+.agrupar{
+    background-color: rgb(62,142,189);
+}
+header, section, footer, aside, nav, article, hgroup{
+    display: block;
+}
+ 
+  .fondo{
+    background-image: url("Cajero.jpg");
+    background-position:center;
+    width: 90%;
+    margin: 10px;
+  }
+.agrupar2{
+    border:4px solid rgb(0, 78, 102);
+    text-align: center;
+}
+.nosotros{
+    background-color: rgb(62,142,189);
+}
+input{
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+    color: black;
+    background-color: rgb(73, 8, 138);
+    border: none;
+    cursor: pointer;
+}

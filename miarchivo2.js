@@ -1,6 +1,6 @@
 /*En este apartado intentaremos crear un cajero automatico, el cual nos indique,
 los fondos que tiene el usuario, si desea retirar plata, o si desea generar un plazo fijo */
-const usuario= [
+/*const usuario= [
 {usuario : "goribe"},{contraseña1 : "function123"},
 {usuario : "proque"},{contraseña2 : "solar1"},
 {usuario : "ssalvo"},{contraseña3 : "parque43"}
@@ -24,7 +24,35 @@ if (ingreseUsuario == usuario1){
   console.log ("Hola susana, elige la opcion a realizar")
 }else{
   console.log("error");
-};
+};*/
+
+function captura(){
+  var nombreus=document.getElementById("nombre").value;
+  var contraus=document.getElementById("contraseña").value;
+  if (nombreus=="goribe" && contraus=="function123"){
+    alert("Bienvenido Gabriel Oribe");
+    console.log(nombreus +" " + contraus );
+  }
+  else if (nombreus=="proque" && contraus=="solar1"){
+    alert("Bienvenido Pedro Roque");
+    console.log(nombreus +" " + contraus );
+  }
+  else if (nombreus=="ssalvo" && contraus=="parque43"){
+    alert("Bienvenida Susana Salvo");
+    console.log(nombreus +" " + contraus );
+  }
+  else if(nombreus==""){
+    alert("Debe ingresar un usuario")
+    document.getElementById("nombre").focus();
+  }else if(contraus==""){
+    alert("Debe ingresar un password")
+    document.getElementById("contraseña").focus();
+  }else{
+  console.log("error");
+}
+}
+
+//Dejo comentado lo hecho en js, que se reemplazó en eventos de formulario
 // En esta primer parte solo determinamos por consola, quien de los primeros 3 clientes de nuestro banco virtual entrará
 let Seleccionar = prompt ("Ingrese opcion (1) si desea hacer un retiro ó ingrese opcion (2) si desea constituir un plazo fijo");
   //Por ahora solo tenemos 2 opciones ya sea extracción o constitución de plazo fijo
