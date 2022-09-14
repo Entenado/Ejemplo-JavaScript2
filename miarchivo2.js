@@ -24,35 +24,89 @@ if (ingreseUsuario == usuario1){
   console.log ("Hola susana, elige la opcion a realizar")
 }else{
   console.log("error");
-};*/
+};*/ 
 
-function captura(){
-  var nombreus=document.getElementById("nombre").value;
-  var contraus=document.getElementById("contraseña").value;
-  if (nombreus=="goribe" && contraus=="function123"){
-    alert("Bienvenido Gabriel Oribe");
-    console.log(nombreus +" " + contraus );
-  }
-  else if (nombreus=="proque" && contraus=="solar1"){
-    alert("Bienvenido Pedro Roque");
-    console.log(nombreus +" " + contraus );
-  }
-  else if (nombreus=="ssalvo" && contraus=="parque43"){
-    alert("Bienvenida Susana Salvo");
-    console.log(nombreus +" " + contraus );
-  }
-  else if(nombreus==""){
-    alert("Debe ingresar un usuario")
-    document.getElementById("nombre").focus();
-  }else if(contraus==""){
-    alert("Debe ingresar un password")
-    document.getElementById("contraseña").focus();
-  }else{
-  console.log("error");
+
+
+//guardar();
+
+obtener_localStorage();
+
+function obtener_localStorage(){
+
+if(localStorage.getItem("usuario1") && (localStorage.getItem("usuario2") && (localStorage.getItem("usuario3")))){
+// se que existe el nombre en el localstorage
+
+let usuario1 = JSON.parse(localStorage.getItem("usuario1"));
+let usuario2 = JSON.parse(localStorage.getItem("usuario2"));
+let usuario3 = JSON.parse(localStorage.getItem("usuario3"));
+/*console.log(usuario1);
+console.log(usuario2);
+console.log(usuario3);
+*/
+}else{
+alert("No hay nommbres en el local storage");
 }
 }
 
-//Dejo comentado lo hecho en js, que se reemplazó en eventos de formulario
+
+   function guardar(){
+        let usuario1 ={
+          usuario : "goribe",
+          contraseña : "function123",
+        };
+        let usuario2 ={
+          usuario : "proque",
+          contraseña : "solar1",
+        };
+        let usuario3 ={
+          usuario : "ssalvo",
+          contraseña : "parque43",
+        };
+
+        localStorage.setItem("usuario1", JSON.stringify(usuario1));
+        localStorage.setItem("usuario2", JSON.stringify(usuario2));
+        localStorage.setItem("usuario3", JSON.stringify(usuario3));
+      }
+
+
+captura();
+      function captura(){
+        var nombreus=document.getElementById("txtuser").value;
+        var contraus=document.getElementById("txtpassword").value;
+        if (nombreus=="goribe" && contraus=="function123"){
+          alert("Bienvenido Gabriel Oribe");
+          console.log(obtener_localStorage(usuario1) );
+          
+          
+        }
+        else if (nombreus=="proque" && contraus=="solar1"){
+          alert("Bienvenido Pedro Roque");
+          console.log(obtener_localStorage(usuario2)  );
+        }
+        else if (nombreus=="ssalvo" && contraus=="parque43"){
+          alert("Bienvenida Susana Salvo");
+          console.log(obtener_localStorage(usuario3)  );
+        }
+          else if(nombreus==""){
+            alert("Debe ingresar un usuario")
+            document.getElementById("txtuser").focus();
+          }else if(contraus==""){
+            alert("Debe ingresar un password")
+            document.getElementById("txtpassword").focus();
+        }else{
+        
+        alert("error");
+      }
+    }
+
+
+
+
+
+
+
+/*
 // En esta primer parte solo determinamos por consola, quien de los primeros 3 clientes de nuestro banco virtual entrará
 let Seleccionar = prompt ("Ingrese opcion (1) si desea hacer un retiro ó ingrese opcion (2) si desea constituir un plazo fijo");
   //Por ahora solo tenemos 2 opciones ya sea extracción o constitución de plazo fijo
@@ -112,6 +166,22 @@ let Seleccionar = prompt ("Ingrese opcion (1) si desea hacer un retiro ó ingres
   else {
     alert ("error")
   };
-  /* El banco es funcional, aun quedan detalles, como concatenar ciertas funciones y objetos, 
-  aun asi entiende lo que queremos hacer, la idea es agregar algunas otras funciones, y empezar a darle forma con css y hmtl*/
-  
+  /* Si bien está desordenado por falta de tiempo,
+   hice la primer parte captuurando datos de formulario utilizando la funcion "Capturar"
+   Falta la siguiente parte.*/
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+     
