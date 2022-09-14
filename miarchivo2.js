@@ -25,6 +25,8 @@ if (ingreseUsuario == usuario1){
 }else{
   console.log("error");
 };*/ 
+//estos son datos viejos de consola, no se si borrarlos o aun no
+
 
 
 
@@ -70,13 +72,14 @@ alert("No hay nommbres en el local storage");
       }
 
 
+      let seleccionar = document.getElementById("seleccionar");
 captura();
       function captura(){
         var nombreus=document.getElementById("txtuser").value;
         var contraus=document.getElementById("txtpassword").value;
         if (nombreus=="goribe" && contraus=="function123"){
           alert("Bienvenido Gabriel Oribe");
-          console.log(obtener_localStorage(usuario1) );
+          obtener_localStorage(usuario1) = seleccionar;
           
           
         }
@@ -103,7 +106,8 @@ captura();
 
 
 
-
+//dejo comentado la segunda parte, ya que aun no hay modificaciones, al no saber como avanzar de pagina
+//cuando se  valida el ingreso. A espera de la respuesta del tutor
 
 
 /*
