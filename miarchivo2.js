@@ -32,7 +32,7 @@ if (ingreseUsuario == usuario1){
 
 //guardar();
 
-obtener_localStorage();
+//obtener_localStorage();
 
 function obtener_localStorage(){
 
@@ -42,10 +42,10 @@ if(localStorage.getItem("usuario1") && (localStorage.getItem("usuario2") && (loc
 let usuario1 = JSON.parse(localStorage.getItem("usuario1"));
 let usuario2 = JSON.parse(localStorage.getItem("usuario2"));
 let usuario3 = JSON.parse(localStorage.getItem("usuario3"));
-/*console.log(usuario1);
+console.log(usuario1);
 console.log(usuario2);
 console.log(usuario3);
-*/
+
 }else{
 alert("No hay nommbres en el local storage");
 }
@@ -72,24 +72,26 @@ alert("No hay nommbres en el local storage");
       }
 
 
-      let seleccionar = document.getElementById("seleccionar");
-captura();
+     
+//captura();
       function captura(){
         var nombreus=document.getElementById("txtuser").value;
         var contraus=document.getElementById("txtpassword").value;
         if (nombreus=="goribe" && contraus=="function123"){
           alert("Bienvenido Gabriel Oribe");
-          obtener_localStorage(usuario1) = seleccionar;
+          console.log (nombreus +" "+  contraus);
           
           
         }
         else if (nombreus=="proque" && contraus=="solar1"){
           alert("Bienvenido Pedro Roque");
-          console.log(obtener_localStorage(usuario2)  );
+          console.log (nombreus +" "+ contraus);
+          
         }
         else if (nombreus=="ssalvo" && contraus=="parque43"){
           alert("Bienvenida Susana Salvo");
-          console.log(obtener_localStorage(usuario3)  );
+          console.log (nombreus +" "+ contraus);
+          
         }
           else if(nombreus==""){
             alert("Debe ingresar un usuario")
@@ -97,11 +99,14 @@ captura();
           }else if(contraus==""){
             alert("Debe ingresar un password")
             document.getElementById("txtpassword").focus();
+  
+
         }else{
-        
         alert("error");
+        document.getElementById("txtpassword").value;
+        
       }
-    }
+      }
 
 
 
