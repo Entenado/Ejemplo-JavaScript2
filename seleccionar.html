@@ -11,13 +11,33 @@
 <nav>
 <ul>
 <li><a href="miarchivo2.html">Inicio</a></li>
-<li><a href="seleccionar.html">Seleccionar</a>
+
 </ul>
 </nav>
+<h1>
+    Ingrese el monto que desea Extraer <br>
+    <form oninput="a.value= parseInt(deposito.value)-parseFloat(extraccion.value)">
+    <input type = "number"  id="deposito" name="deposito" class="input box" placeholder="Ingrese deposito">
+    <input type="number" id="extraccion" name="extraccion" class="input box" placeholder="Ingrese extraccion">
+    <button type="button" class="btn" >aceptar</button>
+    <output type="result"  for="deposito extraccion" name="a" >Resultado</output>
+</form>
+</h1>
 </header>
 <body>
+<h2>Plazo Fijo <br>
+    <br>
+    Ingrese por cuantos dias desea constituir el plazo fijo <br>
 
+    <select name="" id="">
+    
+    <option value="">30 dias</option>
+    <option value="">60 dias</option>
+    <option value="">90 dias</option>
+
+    </select>
+</h2>
    <script src="seleccionar.js"></script>
-    <h1>Armando la nueva pagina</h1>
+    
 </body>
 </html>
