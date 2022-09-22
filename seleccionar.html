@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleccionar</title>
     <link rel="stylesheet" type="text/css" href="estilo.css">
+   
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <header>
 <nav>
@@ -16,15 +18,31 @@
 </nav>
 <h1>
     Ingrese el monto que desea Extraer <br>
-    <form oninput="a.value= parseInt(deposito.value)-parseFloat(extraccion.value)">
-    <input type = "number"  id="deposito" name="deposito" class="input box" placeholder="Ingrese deposito">
+    
+    <input type = "text"  id="nombre" name="deposito" class="input box" placeholder="Ingrese su nombre">
     <input type="number" id="extraccion" name="extraccion" class="input box" placeholder="Ingrese extraccion">
-    <button type="button" class="btn" >aceptar</button>
-    <output type="result"  for="deposito extraccion" name="a" >Resultado</output>
+    <button type="button" class="btn" onclick="extraer(), mostrar()">Aceptar</button>
+    
+    
+    <script type="text/javascript">
+        function mostrar (){
+
+        swal({
+            
+            title: "Extraccion exitosa",
+            
+            text: "Si desea obtener informacion acerca de cajero aconcagua, visite SOBRE NOSOTROS en la parte superior izquierda del inicio",
+        });
+
+        }
+
+    </script>
+
 </form>
 </h1>
 </header>
 <body>
+
 <h2>Plazo Fijo <br>
     <br>
     Ingrese por cuantos dias desea constituir el plazo fijo <br>
@@ -37,6 +55,8 @@
 
     </select>
 </h2>
+
+
    <script src="seleccionar.js"></script>
     
 </body>

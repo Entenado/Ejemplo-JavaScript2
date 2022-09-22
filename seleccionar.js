@@ -1,25 +1,50 @@
 // En esta primer parte solo determinamos por consola, quien de los primeros 3 clientes de nuestro banco virtual entrará
 //let Seleccionar = prompt ("Ingrese opcion (1) si desea hacer un retiro ó ingrese opcion (2) si desea constituir un plazo fijo");
   //Por ahora solo tenemos 2 opciones ya sea extracción o constitución de plazo fijo
-  
+
 let user1 = JSON.parse(localStorage.getItem("usuario1"))
 let user2 = JSON.parse(localStorage.getItem("usuario2"))
 let user3 = JSON.parse(localStorage.getItem("usuario3"))
 
 let{usuario1, contraseña1, deposito1} = user1;
-console.log(deposito1)
 let{usuario2, contraseña2, deposito2} = user2;
-console.log(deposito2)
 let{usuario3, contraseña3, deposito3} = user3;
-console.log(deposito3)
 
-let deposito = [deposito1 || deposito2 || deposito3]
 
-let extraccion = document.getElementById("extraccion").value;
 
-let extraer = deposito - extraccion;
+function extraer() {
+  let deposito = (deposito1, deposito2, deposito3)
 
-console.log(extraer)
+let extraccionn = document.getElementById("extraccion").value;
+console.log(extraccionn);
+
+
+if (document.getElementById("nombre").value == "gabriel oribe") {
+  let deposito = deposito1;
+  let extraerr = deposito - extraccionn;
+  
+  console.log(extraerr);
+  alert("Gabriel usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+  
+
+}else if (document.getElementById("nombre").value == "pedro roque"){
+  let deposito = deposito2;
+  let extraerr = deposito - extraccionn;
+  console.log(extraerr);
+  alert("Pedro usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+}else if (document.getElementById("nombre").value == "susana salvo"){
+  let deposito = deposito3;
+  let extraerr = deposito - extraccionn;
+  console.log(extraerr);
+  alert("Susana usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+}else{
+  alert ("error")
+  extraer = false
+}
+
+}
+
+
 
 
 
