@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abel Fucili">
+    <title>Cajero Aconcagua</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body class="nosotros">
+<div id="dataBank"></div>
+   
+
+    <header("Acces-Control-Allow-Origin:http://127.0.0.1:5500/")>
+        <h1>
+            <p>
+                La tabla arriba muestra, la <b> inflacion esperada</b> en los últimos años
+                esta informacion puede serle útil a la hora de consituir un plazo fijo.
+            </p>
+           
+              <div>
+                   En Cajero Aconcagua tratamos su dinero como el nuestro<br>
+                   Podes realizar tus <b>tramites</b> en simples pasos 
+                   y <b>operar las 24 horas.</b>
+             </div>
+          </h1>
+        <h2>
+        <script>
+            let dataBank = document.querySelector("#dataBank")
+            fetch("https://api.estadisticasbcra.com/inflacion_esperada_oficial",{
+               headers: {Authorization: "BEARER eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTU5OTQ2ODgsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJhYmVsb25fdG9tYmlubzk1QGhvdG1haWwuY29tIn0.Iaz2lgDjzXTdkUOvmw_PLjY-hZEG5qxWLZ5yPr97REpJvbQu4AgjgeYPfWGftOSiC-QdAWnfF03wnLvhWJaNAw",
+               },
+            })
+            .then((response)=>response.json())
+            .then((data)=>{
+                console.log(data)
+
+                data.forEach((info) => {
+                    const content = document.createElement("div")
+                    content.innerHTML = `
+                    <h4>A la fecha : ${info.d} la inflacion esperada fué de ${info.v}</h4>
+                    `
+                    dataBank.append(content)
+                });
+            })
+        </script>
+        </h2>
+        <nav>
+            <ul>
+                <li><a href="miarchivo2.html">Salir</a></li>
+                <li><a href="InflacionEsperada.html">InflacionEsperada</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+     
+      
+    
+</body> 
+</html>

@@ -77,12 +77,14 @@ alert("No hay nommbres en el local storage");
    
      
 //captura();
-      function captura(){
+       
+       function captura(){
         
         let nombreus=document.getElementById("txtuser").value;
         let contraus=document.getElementById("txtpassword").value;
         if (nombreus=="goribe" && contraus=="function123"){
-          alert("Bienvenido Gabriel Oribe");
+          
+          alert("Bienvenido Gabriel Oribe" + " " +  "recuerde que si desea realizar un plazo fijo o una extraccion, porfavor vuelva a ingresar su contraseña para validar");
           location.href = "seleccionar.html"
           console.log (user1);
           
@@ -115,15 +117,8 @@ alert("No hay nommbres en el local storage");
       }
       }
 
-
-
-
-
-
-
-
-
       
+
 
 
 

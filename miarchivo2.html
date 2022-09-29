@@ -8,6 +8,7 @@
     <meta name="author" content="Abel Fucili">
     <title>Cajero Aconcagua</title>
     <link rel="stylesheet"  href="estilo.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
  <body>
    <div class="agrupar">
@@ -17,7 +18,7 @@
             <h1 class ="cabeza"> <img src="Cajero2.jpg" alt="Foto">
               Bienvenido al Cajero Aconcagua</h1>
               <li><a href="miarchivo2.html">Inicio</a></li>
-              <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+              <li><a href="InflacionEsperada.html">InflacionEsperada</a></li>
               
           </ul>
       </nav>
@@ -33,17 +34,34 @@
              <form action="" method= "POST" id="box form">
              <input type = "text" name="user" id="txtuser" class="input box" placeholder="Ingrese usuario">
              <input type="password" name="password" id="txtpassword" class="input box" placeholder="Ingrese contraseña">
-             <button type="button" class="btn" onclick="captura()">entrar</button>
+             <button type="button" class="btn" onclick="ingresarContra(),captura()">entrar</button>
 
              
              
              </form>
             </div>
             </h2>
+            <br>
+            <div>
+              <script type="text/javascript">
+                function ingresarContra (){
+            
+                    swal({
+                        
+                        title: "ERROR",
+                        
+                        text: "Usuario o contraseña inexistentes",
+                    });
+            
+                    }
+                </script>
+            </div>
+            
 
             
-             <script  src="miarchivo2.js">
-            </script>
+             <script  src="miarchivo2.js"></script>
+            
+            
              
             </section>
   </article>

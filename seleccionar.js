@@ -19,7 +19,7 @@ let extraccionn = document.getElementById("extraccion").value;
 console.log(extraccionn);
 
 
-if (document.getElementById("nombre").value == "gabriel oribe") {
+if (document.getElementById("nombre").value == "function123") {
   let deposito = deposito1;
   let extraerr = deposito - extraccionn;
   
@@ -27,22 +27,23 @@ if (document.getElementById("nombre").value == "gabriel oribe") {
   alert("Gabriel usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
   
 
-}else if (document.getElementById("nombre").value == "pedro roque"){
+}else if (document.getElementById("nombre").value == "solar1"){
   let deposito = deposito2;
   let extraerr = deposito - extraccionn;
   console.log(extraerr);
   alert("Pedro usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
-}else if (document.getElementById("nombre").value == "susana salvo"){
+}else if (document.getElementById("nombre").value == "parque43"){
   let deposito = deposito3;
   let extraerr = deposito - extraccionn;
   console.log(extraerr);
-  alert("Susana usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+  alert("Susana usted extrajo" + " " + extraccionn +"pesos" + " " + "usted posee" + " " + extraerr) ;
 }else{
   alert ("error")
   extraer = false
 }
 
 }
+
 
 
 
