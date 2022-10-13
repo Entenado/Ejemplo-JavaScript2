@@ -1,6 +1,7 @@
 // En esta primer parte solo determinamos por consola, quien de los primeros 3 clientes de nuestro banco virtual entrará
 //let Seleccionar = prompt ("Ingrese opcion (1) si desea hacer un retiro ó ingrese opcion (2) si desea constituir un plazo fijo");
   //Por ahora solo tenemos 2 opciones ya sea extracción o constitución de plazo fijo
+  
 
 let user1 = JSON.parse(localStorage.getItem("usuario1"))
 let user2 = JSON.parse(localStorage.getItem("usuario2"))
@@ -9,6 +10,7 @@ let user3 = JSON.parse(localStorage.getItem("usuario3"))
 let{usuario1, contraseña1, deposito1} = user1;
 let{usuario2, contraseña2, deposito2} = user2;
 let{usuario3, contraseña3, deposito3} = user3;
+
 
 
 
@@ -21,73 +23,180 @@ console.log(extraccionn);
 
 if (document.getElementById("nombre").value == "function123") {
   let deposito = deposito1;
-  let extraerr = deposito - extraccionn;
+  deposito1 = deposito - extraccionn;
+  localStorage.setItem("deposito1", JSON.stringify(deposito1));
+  let btnShow = document.getElementById("boton")
+  boton.addEventListener("click",()=>{
+  swal("Gabriel usted extrajo" + " " + extraccionn + " " + "monedas virtuales," + " " + "usted posee" + deposito1 + " " + "monedas vrituales. Si desea realizar otra operacion porfavor actualice la pagina");
   
-  console.log(extraerr);
-  alert("Gabriel usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+  
+  });
+  
+  //console.log(extraerr);
+  //alert("Gabriel usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
   
 
 }else if (document.getElementById("nombre").value == "solar1"){
   let deposito = deposito2;
-  let extraerr = deposito - extraccionn;
-  console.log(extraerr);
-  alert("Pedro usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+  deposito2 = deposito - extraccionn;
+  localStorage.setItem("deposito2", JSON.stringify(deposito2));
+  let btnShow = document.getElementById("boton")
+  boton.addEventListener("click",()=>{
+  swal("Pedro usted extrajo" + " " + extraccionn + " " + "monedas virtuales," + " " + "usted posee"  + deposito2 + " " + "monedas vrituales. Si desea realizar otra operacion porfavor actualice la pagina");
+  
+  
+  });
+  //console.log(extraerr);
+  //alert("Pedro usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
 }else if (document.getElementById("nombre").value == "parque43"){
   let deposito = deposito3;
-  let extraerr = deposito - extraccionn;
-  console.log(extraerr);
-  alert("Susana usted extrajo" + " " + extraccionn +"pesos" + " " + "usted posee" + " " + extraerr) ;
+  deposito3 = deposito - extraccionn;
+  localStorage.setItem("deposito3", JSON.stringify(deposito3));
+  let btnShow = document.getElementById("boton")
+  boton.addEventListener("click",()=>{
+  swal("Susana usted extrajo" + " " + extraccionn + " " + "monedas virtuales," + " " + "usted posee"  + deposito3 + " " + "monedas vrituales. Si desea realizar otra operacion porfavor actualice la pagina" );
+  
+  
+  });
+  //console.log(extraerr);
+  //alert("Susana usted extrajo" + " " + extraccionn +"pesos" + " " + "usted posee" + " " + extraerr) ;
 }else{
-  alert ("error")
   extraer = false
+  
+  let btnShow = document.getElementById("boton")
+  boton.addEventListener("click",()=>{
+  swal("Error!, porfavor recargue la pagina e ingrese nuevamente su password para validar la operacion")
+  });
+  
 }
-
-}
-
+};
 
 
 
 
 
-  /*let deposito = parseFloat(prompt("Ingrese monto a depositar"));
-  let plazos = parseFloat[30,60,90];
-  plazos = parseInt(prompt("Ingrese plazo"));
+function getSelectValue(){
+  let contra = document.getElementById("contras").value
+  let selectdValue = document.getElementById("list").value;
+  let ingreso = parseFloat(document.getElementById("inversion").value);
+  if ( (selectdValue == "30") && (contra == "function123")){
+    ingreso = ingreso + (ingreso*0.20);
+    deposito1 = deposito1 - ingreso
+    console.log(ingreso);
+    console.log(selectdValue);
+   console.log("bienvenido Gabriel");
+   jsonBtn.addEventListener("click",()=>{
+    swal("Gabriel se constituyó un plazo fijo a 30 días con una tasa del 20% mensual, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito1 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+   })
+  }else if ((selectdValue == "60") && (contra == "function123")){
+    ingreso = ingreso + (ingreso*0.40)
+    deposito1 = deposito1 - ingreso
+    console.log(ingreso);
+    console.log("bienvenido Gabriel");
+    jsonBtn.addEventListener("click",()=>{
+    swal("Gabriel se constituyó un plazo fijo a 60 días con una tasa del 40% bimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito1 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir")
+    })
+  }else if ((selectdValue == "90") && (contra == "function123")){
+    ingreso = ingreso + (ingreso*0.60)
+    deposito1 = deposito1 - ingreso
+    console.log(ingreso);
+    console.log("bienvenido Gabriel");
+    jsonBtn.addEventListener("click",()=>{
+    swal("Gabriel se constituyó un plazo fijo a 90 días con una tasa del 60% trimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito1 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+    })
+  }else if ( (selectdValue == "30") && (contra == "solar1")){
+      ingreso = ingreso + (ingreso*0.20)
+      deposito2 = deposito2 - ingreso
+      console.log(ingreso);
+      console.log(selectdValue);
+     console.log("bienvenido Pedro");
+     jsonBtn.addEventListener("click",()=>{
+      swal("Pedro se constituyó un plazo fijo a 30 días con una tasa del 20% mensual, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito2 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+     })
+    }else if ((selectdValue == "60") && (contra == "solar1")){
+      ingreso = ingreso + (ingreso*0.40)
+      deposito2 = deposito2 - ingreso
+      console.log(ingreso);
+      console.log("bienvenido Pedro");
+      jsonBtn.addEventListener("click",()=>{
+      swal("Pedro se constituyó un plazo fijo a 60 días con una tasa del 40% bimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito2 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+      })
+    }else if ((selectdValue == "90") && (contra == "solar1")){
+      ingreso = ingreso + (ingreso*0.60)
+      deposito2 = deposito2 - ingreso
+      console.log(ingreso);
+      console.log("bienvenido Pedro");
+      jsonBtn.addEventListener("click",()=>{
+      swal("Pedro se constituyó un plazo fijo a 90 días con una tasa del 60% trimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito2 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+      })
+    }else if ( (selectdValue == "30") && (contra == "parque43")){
+        ingreso = ingreso + (ingreso*0.20)
+        deposito3 = deposito3 - ingreso
+        console.log(ingreso);
+        console.log(selectdValue);
+       console.log("bienvenida Susana");
+       jsonBtn.addEventListener("click",()=>{
+        swal("Susana se constituyó un plazo fijo a 30 días con una tasa del 20% mensual, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito3 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+       })
+      }else if ((selectdValue == "60") && (contra == "parque43")){
+        ingreso = ingreso + (ingreso*0.40)
+        deposito3 = deposito3 - ingreso
+        console.log(ingreso);
+        console.log("bienvenida Susana");
+        jsonBtn.addEventListener("click",()=>{
+        swal("Susana se constituyó un plazo fijo a 60 días con una tasa del 40% bimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito3 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+        })
+      }else if ((selectdValue == "90") && (contra == "parque43")){
+        ingreso = ingreso + (ingreso*0.60)
+        deposito3 = deposito3 - ingreso
+        console.log(ingreso);
+        console.log("bienvenida Susana");
+        jsonBtn.addEventListener("click",()=>{
+        swal("Susana se constituyó un plazo fijo a 90 días con una tasa del 60% trimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito3 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
+        })
+}else{
+  getSelectValue = false;
+  let btnShow = document.getElementById("jsonBtn")
+  jsonBtn.addEventListener("click",()=>{
+  swal("Error al validar password, o al seleccionar el plazo, porfavor recargue la pagina y vuelva a llenar los campos correctamente");
+  //alert ("Error al validar password, o al seleccionar el plazo, porfavor recargue la pagina y vuelva a llenar los campos correctamente");
+  });
+};
+};
 
- function plazoFijo(deposito){
-    
-      if (plazos == 30) {
-        deposito = (deposito * 0.20)+ deposito;
-        return deposito;
-      }
-      else if (plazos == 60){
-        deposito = (deposito * 0.40) + deposito;
-        return deposito;
-      }
-      else if (plazos == 90){
-        deposito = (deposito * 0.60)+ deposito;
-        return deposito;
-      }
-      else { 
-        alert("error");
-      }
-      
-    };
   
-  // En este apartado seleccionamos la opcion a realizar.
-  if (Seleccionar ==1){
-  console.log("Usted posee en la cuenta la suma de", extraccion.fondos, "pesos disponibles.");
+
+
+
+
+
+
+
+
+
+
+
+
   
-  console.log("Usted solicitó extraer", extraccion.montoExtraccion, "pesos.");
-  
-  console.log("El saldo disponible es de", extraccion.saldo, "pesos.");
-  }
-  else if (Seleccionar == 2){
-    console.log ("usted constituyó un plazo fijo a", plazos, "dias");
-    console.log ("una vez finalizado el periodo, usted obtendrá la suma de",plazoFijo(deposito),"pesos");
-  }
-  else {
-    alert ("error")
-  };
-  /* Si bien está desordenado por falta de tiempo,
-   hice la primer parte captuurando datos de formulario utilizando la funcion "Capturar"
-   Falta la siguiente parte.*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

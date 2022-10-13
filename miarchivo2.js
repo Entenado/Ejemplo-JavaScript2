@@ -1,32 +1,3 @@
-/*En este apartado intentaremos crear un cajero automatico, el cual nos indique,
-los fondos que tiene el usuario, si desea retirar plata, o si desea generar un plazo fijo */
-/*const usuario= [
-{usuario : "goribe"},{contraseña1 : "function123"},
-{usuario : "proque"},{contraseña2 : "solar1"},
-{usuario : "ssalvo"},{contraseña3 : "parque43"}
-]
-let ingreseUsuario = prompt ("Bienvenido al cajero aconcagua, porfavor ingrese usuario");
-let ingreseContraseña = prompt ("Ingrese su contraseña");
-const usuario1 = usuario.find((x) => x.usuario === "goribe");
-const usuario2 = usuario.find((x) => x.usuario === "proque");
-const usuario3 = usuario.find((x) => x.usuario === "ssalvo");
-if (ingreseUsuario == usuario1){
-  console.log ("");
-}else if (ingreseContraseña == "function123"){
-  console.log("Hola gonzalo,eliga la opcion a realizar")
-} else if (ingreseUsuario == usuario2){
-  console.log ("");
-}else if (ingreseContraseña == "solar1"){
-  console.log ("Hola pedro, elige la opcion a realizar")
-}else if (ingreseUsuario == usuario3){
-  console.log ("");
-}else if (ingreseContraseña == "parque43"){
-  console.log ("Hola susana, elige la opcion a realizar")
-}else{
-  console.log("error");
-};*/ 
-//estos son datos viejos de consola, no se si borrarlos o aun no
-
 
 
 
@@ -84,7 +55,7 @@ alert("No hay nommbres en el local storage");
         let contraus=document.getElementById("txtpassword").value;
         if (nombreus=="goribe" && contraus=="function123"){
           
-          alert("Bienvenido Gabriel Oribe" + " " +  "recuerde que si desea realizar un plazo fijo o una extraccion, porfavor vuelva a ingresar su contraseña para validar");
+          alert("Bienvenido Gabriel Oribe" )
           location.href = "seleccionar.html"
           console.log (user1);
           
@@ -117,7 +88,10 @@ alert("No hay nommbres en el local storage");
       }
       }
 
-      
+      function handleOnFocus(x){
+        x.style.color = "black";
+        x.style.backgroundColor="bluelight";
+      }
 
 
 

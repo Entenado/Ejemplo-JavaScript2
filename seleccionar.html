@@ -9,57 +9,59 @@
    
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
+<div class="PlazoFijo">
 <header>
 <nav>
-<ul>
-<li><a href="miarchivo2.html">Inicio</a></li>
+<ul style="list-style-type: none;">
+<li><a class="boton3" href="miarchivo2.html">Salir</a></li>
 
 </ul>
 </nav>
-<h1>
-    Ingrese el monto que desea Extraer <br>
+<h1 class="extraccion">
+    Ingrese el monto que desea extraer <br>
 
+    <br><input type="number" id="extraccion" name="extraccion" class="input box" placeholder="Ingrese extraccion">
     <input type = "password"  id="nombre" name="deposito" class="input box" placeholder="Ingrese su contraseña">
-    <input type="number" id="extraccion" name="extraccion" class="input box" placeholder="Ingrese extraccion">
-    
-    <button type="button" class="btn" onclick="extraer(), mostrar()">Aceptar</button>
-    
-    
-    <script type="text/javascript">
-        function mostrar (){
-
-        swal({
-            
-            title: "Extraccion exitosa",
-            
-            text: "Si desea obtener informacion acerca de cajero aconcagua, visite SOBRE NOSOTROS en la parte superior izquierda del inicio",
-        });
-
-        }
-
-    </script>
-
-</form>
+    <botton id="boton" type="reset" class="boton1" onclick="extraer()">Doble click para validar operación</botton>
+   
 </h1>
 </header>
 <body>
 
-<h2>Plazo Fijo <br>
+<h2 class="PF">Plazo Fijo <br>
     <br>
     Ingrese por cuantos dias desea constituir el plazo fijo <br>
 
-    <select name="" id="">
+    <br><input type="text" id="list" class="input box" placeholder="ej: 30, 60, 90 ">
     
-    <option value="">30 dias</option>
-    <option value="">60 dias</option>
-    <option value="">90 dias</option>
-
-    </select>
-    <button id="jsonBtn" type="button" class="btn" >Aceptar</button>
+    <br>
+    <input type="number" id="inversion" name="extraccion" class="input box" placeholder="Ingrese monto a depositar">
+    <input type = "password"  id="contras" name="deposito" class="input box" placeholder="Ingrese su contraseña">
+    <button id="jsonBtn" class="boton2" type="reset" onclick="getSelectValue()" class="btn" >Doble click para validar operación</button>
+   
 </h2>
-
+<h3>
+    <div>
+        <ul id="lista">
+        
+    </ul>
+    </div>
+</h3>
 
    <script src="seleccionar.js"></script>
+   <aside class="texto1">
+    <h4>Recuerde que si desea constituir un plazo fijo los intereses serán correspondietes a</h4>
+    <div>
+      30 días -> 20 % de intereses
+    </div>
+    <div>
+      60 días -> 40% de intereses
+    </div>
+    <div>
+      90 días -> 60% de intereses
+    </div>
+    </aside>
     
 </body>
+</div>
 </html>

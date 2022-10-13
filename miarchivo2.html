@@ -12,15 +12,25 @@
 </head>
  <body>
    <div class="agrupar">
-    <header class="header">
-      <nav class = "menu">
-          <ul>
-            <h1 class ="cabeza"> <img src="Cajero2.jpg" alt="Foto">
-              Bienvenido al Cajero Aconcagua</h1>
-              <li><a href="miarchivo2.html">Inicio</a></li>
-              <li><a href="InflacionEsperada.html">InflacionEsperada</a></li>
+    <header class="muestra">
+      <div class="logo">
+          <ul style="list-style-type: none;">
+            <h1><a href="miarchivo2.html" class ="Bienvenido"> <img src="Cajero2.jpg" alt="Foto">
+              Bienvenido al Cajero Aconcagua</a>
+            </h1>
+            <nav class = "menu">
+              <li><a href="miarchivo2.html" class="nav-link">Inicio</a></li>
               
+            
+              <li><a href="InflacionEsperada.html" class="nav-link2">InflacionEsperada</a></li>
+
+
+              
+              
+
+
           </ul>
+        </div>
       </nav>
   </header>
   <article>
@@ -32,10 +42,22 @@
           
         
              <form action="" method= "POST" id="box form">
-             <input type = "text" name="user" id="txtuser" class="input box" placeholder="Ingrese usuario">
-             <input type="password" name="password" id="txtpassword" class="input box" placeholder="Ingrese contraseña">
-             <button type="button" class="btn" onclick="ingresarContra(),captura()">entrar</button>
-
+             <input type = "text" name="user" onfocus ="handleOnFocus(this)" id="txtuser" class="input box" placeholder="Ingrese usuario">
+             <input type="password" name="password" onfocus ="handleOnFocus(this)" id="txtpassword" class="input box" placeholder="Ingrese contraseña">
+             
+             <button type="reset" class="btn" onclick="ingresarContra(),captura()">entrar</button>
+             <style type="text/css">
+              .btn{
+                text-decoration: none;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 20px;
+                color: #ffffff;
+                background-color: #1883ba;
+                border-radius: 6px;
+                border: 2px solid #0016b0;
+              }
+            </style>
              
              
              </form>
@@ -66,16 +88,21 @@
             </section>
   </article>
   <aside>
-              <h3>Recuerde que si desea constituir un plazo fijo los intereses serán correspondietes a</h3>
+              <h3>En esta primer etapa Cajero Aconcagua hace la primer prueba con sus primeros 3 clientes, siendo sus datos:</h3>
               <div>
-                30 días -> 20 % de intereses
+                Gabriel Oribe - usuario: goribe - contraseña: function123 - deposito: 450000 MV
               </div>
+              <br>
               <div>
-                60 días -> 40% de intereses
+                Pedro Roque - usuario:proque - contraseña: solar1 - deposito: 750000 MV
+                
               </div>
+              <br>
               <div>
-                90 días -> 60% de intereses
+                Susana Salvo - usuario: ssalvo - contraseña: parque43 - deposito: 800000 MV
+
               </div>
+              <br>
               </aside>
    
           <footer class="pie">
