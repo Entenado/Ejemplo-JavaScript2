@@ -1,14 +1,9 @@
 
 
-
-//guardar();
-
-//obtener_localStorage();
-
 function obtener_localStorage(){
 
 if(localStorage.getItem("usuario1") && (localStorage.getItem("usuario2") && (localStorage.getItem("usuario3")))){
-// se que existe el nombre en el localstorage
+
 
 let usuario1 = JSON.parse(localStorage.getItem("usuario1"));
 let usuario2 = JSON.parse(localStorage.getItem("usuario2"));
@@ -45,9 +40,16 @@ alert("No hay nommbres en el local storage");
         localStorage.setItem("usuario3", JSON.stringify(usuario3));
       }
 
+   guardar()
+   //obtener_localStorage();
+
+   // En esta primer parte determinamos las 2 funciones, tanto para guardar los cambios que tengamos en el LS
+   // O para obtener los nuevos cambios, es decir que cuando quiera guardar nuevos cambios, descomento la funcion (guardar)
+   // O bien para obtener los nuevos cambios descomento (obtener_localStorage)  
    
-     
-//captura();
+
+
+
        
        function captura(){
         
@@ -86,14 +88,14 @@ alert("No hay nommbres en el local storage");
         alert("error");
         
       }
-      }
-
+    }
       function handleOnFocus(x){
         x.style.color = "black";
         x.style.backgroundColor="bluelight";
       }
+    
 
-
+//En esta segunda parte se ingresa el nombre y la contraseña del usuario
 
 
 

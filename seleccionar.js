@@ -1,6 +1,4 @@
-// En esta primer parte solo determinamos por consola, quien de los primeros 3 clientes de nuestro banco virtual entrará
-//let Seleccionar = prompt ("Ingrese opcion (1) si desea hacer un retiro ó ingrese opcion (2) si desea constituir un plazo fijo");
-  //Por ahora solo tenemos 2 opciones ya sea extracción o constitución de plazo fijo
+
   
 
 let user1 = JSON.parse(localStorage.getItem("usuario1"))
@@ -12,10 +10,11 @@ let{usuario2, contraseña2, deposito2} = user2;
 let{usuario3, contraseña3, deposito3} = user3;
 
 
-
+// En esta parte se obtiene información atraves del local storage una vez guardado los datos correctamente
+// en "miarchivo2.js, estos datos servirán para determinar el depósito de cada cliente".
 
 function extraer() {
-  let deposito = (deposito1, deposito2, deposito3)
+ let deposito = (deposito1, deposito2, deposito3)
 
 let extraccionn = document.getElementById("extraccion").value;
 console.log(extraccionn);
@@ -32,8 +31,7 @@ if (document.getElementById("nombre").value == "function123") {
   
   });
   
-  //console.log(extraerr);
-  //alert("Gabriel usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+  
   
 
 }else if (document.getElementById("nombre").value == "solar1"){
@@ -46,8 +44,8 @@ if (document.getElementById("nombre").value == "function123") {
   
   
   });
-  //console.log(extraerr);
-  //alert("Pedro usted extrajo" +" " + extraccionn +"pesos" +" " + "usted posee" + " " + extraerr) ;
+  
+
 }else if (document.getElementById("nombre").value == "parque43"){
   let deposito = deposito3;
   deposito3 = deposito - extraccionn;
@@ -58,8 +56,8 @@ if (document.getElementById("nombre").value == "function123") {
   
   
   });
-  //console.log(extraerr);
-  //alert("Susana usted extrajo" + " " + extraccionn +"pesos" + " " + "usted posee" + " " + extraerr) ;
+  
+
 }else{
   extraer = false
   
@@ -70,7 +68,6 @@ if (document.getElementById("nombre").value == "function123") {
   
 }
 };
-
 
 
 
@@ -159,7 +156,7 @@ function getSelectValue(){
   let btnShow = document.getElementById("jsonBtn")
   jsonBtn.addEventListener("click",()=>{
   swal("Error al validar password, o al seleccionar el plazo, porfavor recargue la pagina y vuelva a llenar los campos correctamente");
-  //alert ("Error al validar password, o al seleccionar el plazo, porfavor recargue la pagina y vuelva a llenar los campos correctamente");
+  
   });
 };
 };
