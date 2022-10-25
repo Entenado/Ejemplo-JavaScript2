@@ -30,9 +30,7 @@ if (document.getElementById("nombre").value == "function123") {
   
   
   });
-  
-  
-  
+
 
 }else if (document.getElementById("nombre").value == "solar1"){
   let deposito = deposito2;
@@ -79,9 +77,6 @@ function getSelectValue(){
   if ( (selectdValue == "30") && (contra == "function123")){
     ingreso = ingreso + (ingreso*0.20);
     deposito1 = deposito1 - ingreso
-    console.log(ingreso);
-    console.log(selectdValue);
-   console.log("bienvenido Gabriel");
    jsonBtn.addEventListener("click",()=>{
     swal("Gabriel se constituyó un plazo fijo a 30 días con una tasa del 20% mensual, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito1 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
    })
@@ -96,58 +91,42 @@ function getSelectValue(){
   }else if ((selectdValue == "90") && (contra == "function123")){
     ingreso = ingreso + (ingreso*0.60)
     deposito1 = deposito1 - ingreso
-    console.log(ingreso);
-    console.log("bienvenido Gabriel");
     jsonBtn.addEventListener("click",()=>{
     swal("Gabriel se constituyó un plazo fijo a 90 días con una tasa del 60% trimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito1 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
     })
   }else if ( (selectdValue == "30") && (contra == "solar1")){
       ingreso = ingreso + (ingreso*0.20)
       deposito2 = deposito2 - ingreso
-      console.log(ingreso);
-      console.log(selectdValue);
-     console.log("bienvenido Pedro");
      jsonBtn.addEventListener("click",()=>{
       swal("Pedro se constituyó un plazo fijo a 30 días con una tasa del 20% mensual, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito2 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
      })
     }else if ((selectdValue == "60") && (contra == "solar1")){
       ingreso = ingreso + (ingreso*0.40)
       deposito2 = deposito2 - ingreso
-      console.log(ingreso);
-      console.log("bienvenido Pedro");
       jsonBtn.addEventListener("click",()=>{
       swal("Pedro se constituyó un plazo fijo a 60 días con una tasa del 40% bimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito2 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
       })
     }else if ((selectdValue == "90") && (contra == "solar1")){
       ingreso = ingreso + (ingreso*0.60)
       deposito2 = deposito2 - ingreso
-      console.log(ingreso);
-      console.log("bienvenido Pedro");
       jsonBtn.addEventListener("click",()=>{
       swal("Pedro se constituyó un plazo fijo a 90 días con una tasa del 60% trimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito2 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
       })
     }else if ( (selectdValue == "30") && (contra == "parque43")){
         ingreso = ingreso + (ingreso*0.20)
         deposito3 = deposito3 - ingreso
-        console.log(ingreso);
-        console.log(selectdValue);
-       console.log("bienvenida Susana");
        jsonBtn.addEventListener("click",()=>{
         swal("Susana se constituyó un plazo fijo a 30 días con una tasa del 20% mensual, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito3 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
        })
       }else if ((selectdValue == "60") && (contra == "parque43")){
         ingreso = ingreso + (ingreso*0.40)
         deposito3 = deposito3 - ingreso
-        console.log(ingreso);
-        console.log("bienvenida Susana");
         jsonBtn.addEventListener("click",()=>{
         swal("Susana se constituyó un plazo fijo a 60 días con una tasa del 40% bimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito3 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
         })
       }else if ((selectdValue == "90") && (contra == "parque43")){
         ingreso = ingreso + (ingreso*0.60)
         deposito3 = deposito3 - ingreso
-        console.log(ingreso);
-        console.log("bienvenida Susana");
         jsonBtn.addEventListener("click",()=>{
         swal("Susana se constituyó un plazo fijo a 90 días con una tasa del 60% trimestral, dando un total de" +"  " + ingreso + " " + "monedas virtuales al finalizar el periodo."+"  "+ "Su saldo es de" + deposito3 +" "+ "monedas virtuales. Si desea realizar otra operacion porfavor recargue la pagina o bien para finalizar oprima Salir");
         })

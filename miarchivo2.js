@@ -55,39 +55,32 @@ alert("No hay nommbres en el local storage");
         
         let nombreus=document.getElementById("txtuser").value;
         let contraus=document.getElementById("txtpassword").value;
-        if (nombreus=="goribe" && contraus=="function123"){
-          
-          alert("Bienvenido Gabriel Oribe" )
+        if (nombreus=="goribe" && contraus=="function123"){       
           location.href = "seleccionar.html"
           console.log (user1);
-          
-          
-          
+             
         }
-        else if (nombreus=="proque" && contraus=="solar1"){
-          alert("Bienvenido Pedro Roque");
+        else if (nombreus=="proque" && contraus=="solar1"){        
           location.href = "seleccionar.html"
           console.log (user2);
           
         }
-        else if (nombreus=="ssalvo" && contraus=="parque43"){
-          alert("Bienvenida Susana Salvo");
+        else if (nombreus=="ssalvo" && contraus=="parque43"){      
           location.href = "seleccionar.html"
           console.log (user3);
-          
         }
+
           else if(nombreus==""){
-            alert("Debe ingresar un usuario")
             document.getElementById("txtuser").focus();
-          }else if(contraus==""){
-            alert("Debe ingresar un password")
+
+          }else if(contraus==""){          
             document.getElementById("txtpassword").focus();
           
 
-        }else{
-        alert("error");
+        }else{    
         
       }
+
     }
       function handleOnFocus(x){
         x.style.color = "black";
