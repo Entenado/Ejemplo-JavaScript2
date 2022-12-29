@@ -17,34 +17,13 @@
         <h1>
             <ul style="list-style-type: none;">
             <li><a class="tabla" href="InflacionEsperada.html">
-                La tabla arriba muestra la <b> inflacion esperada</b> en los últimos años,
-                esta información puede serle útil a la hora de consituir un plazo fijo.
+                
             </a>
         </li>
     </ul>
               
           </h1>
-          <h2>
-            <script>
-                let dataBank = document.querySelector("#dataBank")
-                fetch("https://api.estadisticasbcra.com/inflacion_esperada_oficial",{
-                   headers: {Authorization: "BEARER eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTU5OTQ2ODgsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJhYmVsb25fdG9tYmlubzk1QGhvdG1haWwuY29tIn0.Iaz2lgDjzXTdkUOvmw_PLjY-hZEG5qxWLZ5yPr97REpJvbQu4AgjgeYPfWGftOSiC-QdAWnfF03wnLvhWJaNAw",
-                   },
-                })
-                .then((response)=>response.json())
-                .then((data)=>{
-                    console.log(data)
-    
-                    data.forEach((info) => {
-                        const content = document.createElement("div")
-                        content.innerHTML = `
-                        <h4>A la fecha : ${info.d} la inflacion esperada fué de ${info.v}</h4>
-                        `
-                        dataBank.append(content)
-                    });
-                })
-            </script>
-            </h2>
+          
 
         <nav>
             <ul style="list-style-type: none;">

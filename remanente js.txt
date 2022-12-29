@@ -1,0 +1,115 @@
+/*
+const button = document.getElementById("button")
+const scoreElement = document.getElementById ("score_element")
+
+
+/**Local storage
+ * set item ("clave", "valor")
+ * get item("clave"): "valor"
+ * removeItem("clave") => eliminar el valor almacenado
+ */
+
+/*if(typeof (localStorage) === "undefined"){
+  console.log("your browser not soport localstorage :(")
+}
+
+if (localStorage.getItem("score")){
+  scoreElement.innerText = localStorage.getItem("score")
+}else{
+  localStorage.setItem("score", "0")
+}
+button.onclick = () => {
+  const currentScore = localStorage.getItem("score")
+  localStorage.setItem("score", parseInt(currentScore) + 1)
+  scoreElement.innerText = localStorage.getItem ("score")
+};*/
+
+
+
+
+/* function captura(){
+        var nombreus=document.getElementById("txtuser").value;
+        var contraus=document.getElementById("txtpassword").value;
+        if (nombreus=="goribe" && contraus=="function123"){
+          alert("Bienvenido Gabriel Oribe");
+          console.log(nombreus +" " + contraus );
+        }
+        else if (nombreus=="proque" && contraus=="solar1"){
+          alert("Bienvenido Pedro Roque");
+          console.log(nombreus +" " + contraus );
+        }
+        else if (nombreus=="ssalvo" && contraus=="parque43"){
+          alert("Bienvenida Susana Salvo");
+          console.log(nombreus +" " + contraus );
+        }
+        else if(nombreus==""){
+          alert("Debe ingresar un usuario")
+          document.getElementById("nombre").focus();
+        }else if(contraus==""){
+          alert("Debe ingresar un password")
+          document.getElementById("contraseña").focus();
+        }else{
+        alert("error");
+      }
+      }
+
+     */
+
+
+<input class="mensaje" type="submit" value="entrar" onclick="captura()">
+
+
+ else if(nombreus==""){
+          alert("Debe ingresar un usuario")
+          document.getElementById("txtuser").focus();
+        }else if(contraus==""){
+          alert("Debe ingresar un password")
+          document.getElementById("txtpassword").focus();
+
+
+<window id="seleccionar"> <a href="seleccionar.html"></a>></window>
+
+<li id="linkentrada"><a href="seleccionar.html" onclick="captura()" type="submit" class = "mensaje" >entrar</a>
+
+
+
+
+const extraccion = {
+  fondos : parseInt(prompt("Ingrese Fondos")),
+  
+  montoExtraccion : parseInt (prompt("Ingrese extraccion")),
+  
+  saldo : ""}
+  
+  function cajero (fondos, montoExtraccion) {
+  
+  extraccion.saldo = extraccion.fondos - extraccion.montoExtraccion
+  
+  return extraccion.saldo}
+  
+  
+  cajero(extraccion.fondos, extraccion.montoExtraccion);
+
+
+
+<form oninput="a.value= parseInt(deposito.value)-parseFloat(extraccion.value)">
+
+
+<button type="button" class="btn" >aceptar</button>
+    <output type="result"  for="deposito extraccion" name="a" >Resultado</output>
+
+
+
+<button type="button" class="btn" onclick="extraer()">entrar</button>
+
+
+
+<button onclick="mostrar()">Mostrar</button>
+<script type="text/javascript">
+        function mostrar (){
+
+        swal("Gordo trolo");
+
+        }
+
+    </script>
